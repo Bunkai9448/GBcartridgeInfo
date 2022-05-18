@@ -10,6 +10,8 @@ Used to quickly visualize (and/or use) the key values in a Gameboy cartridge
 - Python version used: 3.7.3
 - A gb ROM file
 
+**Considerations**
+- To use this you need to have both, python and ROM, files in the same folder
 
 **Author**
 
