@@ -64,7 +64,20 @@ with open('initialD.gb','br') as f:
 	print('Address for ROM header > int:', pHeader_CS,' ; hex:',hex(pHeader_CS))
 	val = binascii.hexlify(f.read(1))
 	print('Hex value on that location:',val)
-	print()
+# Calculate proper Header Checksum from the file
+	checkSum = 0 
+	cursor = 0x0134
+	cEnd = 0x014C
+	f.seek(cursor)
+	while cursor <= cEnd:		
+		readByte = f.read(1)
+		readByteHex = binascii.hexlify(readByte)		
+		val = int(readByteHex,16)
+		checkSum = checkSum - (val + 1)
+		checkSum = checkSum%256
+		cursor = cursor + 1 		
+	print('Proper checksum:', hex(checkSum))
+	print()	
 	
 # 014E-014F - Global Checksum
  # Contains a 16 bit checksum (upper byte first) across the whole cartridge ROM. 
