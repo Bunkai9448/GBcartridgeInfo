@@ -4,6 +4,8 @@ Used to quickly visualize (and/or use) the key values in a Gameboy cartridge
 
 **Documentation used**
 - https://gbdev.io/pandocs/The_Cartridge_Header.html
+- https://gbdev.io/pandocs/Sound_Controller.html
+- https://github.com/bwhitman/pushpin/blob/master/src/gbsound.txt
 
 
 **Prerequisites**
