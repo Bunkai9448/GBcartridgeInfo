@@ -38,6 +38,7 @@ with open('initialD.gb','br') as f:
  # FF1E - NR34 - Channel 3 Frequency s higher data (R/W)
  # FF30-FF3F - Wave Pattern RAM
 	waveAddress = 0x83DD
+	print('Sound3 Wave Address: ', hex(waveAddress))	
 	f.seek(waveAddress)
 	waveValue = binascii.hexlify(f.read(16))
 	print('Sound3 Wave Pattern: ', waveValue)
