@@ -101,7 +101,7 @@ with open('initialD.gb','br') as f:
 	sound4[4] = hex(a)		# 01:		
 
  
-# --- Updates
+# --- Sound Channels Updates
 		
 	a = 0x80				# 01:4130 which is 0x8130
 	# FF00+1A 
